@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "application_python": "/workspace/scratch/39f86420ae94/.venv314/bin/python",
+  "browser": "Chromium",
+  "screenshots": [
+    "01_overview.png",
+    "02_screening.png",
+    "03_anomaly.png",
+    "04_model_laboratory.png",
+    "05_component.png",
+    "06_reports.png",
+    "07_laptop_overview.png"
+  ],
+  "verified": [
+    "launch",
+    "six page screenshots",
+    "screening execution",
+    "component review save",
+    "PDF byte download",
+    "CSV upload / mapping preview / commit",
+    "batch context",
+    "900px viewport no body overflow",
+    "diagnostics smoke"
+  ],
+  "page_errors": []
+}

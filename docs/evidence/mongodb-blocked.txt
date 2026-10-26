@@ -1,0 +1,92 @@
+Downloading MongoDB "7.0.14": 0% (0mb / 80.8mb)
+Downloading MongoDB "7.0.14": 100% (80.8mb / 80.8mb)
+Downloading MongoDB "7.0.14": 100% (0mb / 0mb)
+Downloading MongoDB "7.0.14": 100% (0mb / 0mb)
+Starting the MongoMemoryServer Instance failed, enable debug log for more information. Error:
+ UnexpectedCloseError: Instance closed unexpectedly with code "100" and signal "null"
+    at MongoInstance.closeHandler (/workspace/scratch/39f86420ae94/ess-sentinel-web/node_modules/mongodb-memory-server-core/lib/util/MongoInstance.js:335:58)
+    at ChildProcess.emit (node:events:514:28)
+    at maybeClose (node:internal/child_process:1172:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:335:5)
+✖ authentication, viewer authorization, health and invalid IDs (16589.225633ms)
+✖ real CSV preview and Mongo create/read/update/delete persist across reconnect (1.10672ms)
+✖ real seed and screening preserve historical references (0.188024ms)
+✖ reviews validate component membership and persist annotations (0.070226ms)
+✖ pagination, filters, input validation and immutable audit (0.082144ms)
+✖ policy validation, quality, scenario and PDF/XLSX exports use Python (0.126361ms)
+✖ actual model training, prediction and persisted evaluation (0.075905ms)
+✖ Python startup failure and timeout are structured (0.118358ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 0
+ℹ fail 8
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 17040.848713
+
+✖ failing tests:
+
+test at ess-sentinel-web/tests/api.test.js:6:1
+✖ authentication, viewer authorization, health and invalid IDs (16589.225633ms)
+  Error: Instance closed unexpectedly with code "100" and signal "null"
+      at MongoInstance.closeHandler (/workspace/scratch/39f86420ae94/ess-sentinel-web/node_modules/mongodb-memory-server-core/lib/util/MongoInstance.js:335:58)
+      at ChildProcess.emit (node:events:514:28)
+      at maybeClose (node:internal/child_process:1172:16)
+      at ChildProcess._handle.onexit (node:internal/child_process:335:5)
+
+test at ess-sentinel-web/tests/api.test.js:7:1
+✖ real CSV preview and Mongo create/read/update/delete persist across reconnect (1.10672ms)
+  Error: Instance closed unexpectedly with code "100" and signal "null"
+      at MongoInstance.closeHandler (/workspace/scratch/39f86420ae94/ess-sentinel-web/node_modules/mongodb-memory-server-core/lib/util/MongoInstance.js:335:58)
+      at ChildProcess.emit (node:events:514:28)
+      at maybeClose (node:internal/child_process:1172:16)
+      at ChildProcess._handle.onexit (node:internal/child_process:335:5)
+
+test at ess-sentinel-web/tests/api.test.js:8:1
+✖ real seed and screening preserve historical references (0.188024ms)
+  Error: Instance closed unexpectedly with code "100" and signal "null"
+      at MongoInstance.closeHandler (/workspace/scratch/39f86420ae94/ess-sentinel-web/node_modules/mongodb-memory-server-core/lib/util/MongoInstance.js:335:58)
+      at ChildProcess.emit (node:events:514:28)
+      at maybeClose (node:internal/child_process:1172:16)
+      at ChildProcess._handle.onexit (node:internal/child_process:335:5)
+
+test at ess-sentinel-web/tests/api.test.js:9:1
+✖ reviews validate component membership and persist annotations (0.070226ms)
+  Error: Instance closed unexpectedly with code "100" and signal "null"
+      at MongoInstance.closeHandler (/workspace/scratch/39f86420ae94/ess-sentinel-web/node_modules/mongodb-memory-server-core/lib/util/MongoInstance.js:335:58)
+      at ChildProcess.emit (node:events:514:28)
+      at maybeClose (node:internal/child_process:1172:16)
+      at ChildProcess._handle.onexit (node:internal/child_process:335:5)
+
+test at ess-sentinel-web/tests/api.test.js:10:1
+✖ pagination, filters, input validation and immutable audit (0.082144ms)
+  Error: Instance closed unexpectedly with code "100" and signal "null"
+      at MongoInstance.closeHandler (/workspace/scratch/39f86420ae94/ess-sentinel-web/node_modules/mongodb-memory-server-core/lib/util/MongoInstance.js:335:58)
+      at ChildProcess.emit (node:events:514:28)
+      at maybeClose (node:internal/child_process:1172:16)
+      at ChildProcess._handle.onexit (node:internal/child_process:335:5)
+
+test at ess-sentinel-web/tests/api.test.js:11:1
+✖ policy validation, quality, scenario and PDF/XLSX exports use Python (0.126361ms)
+  Error: Instance closed unexpectedly with code "100" and signal "null"
+      at MongoInstance.closeHandler (/workspace/scratch/39f86420ae94/ess-sentinel-web/node_modules/mongodb-memory-server-core/lib/util/MongoInstance.js:335:58)
+      at ChildProcess.emit (node:events:514:28)
+      at maybeClose (node:internal/child_process:1172:16)
+      at ChildProcess._handle.onexit (node:internal/child_process:335:5)
+
+test at ess-sentinel-web/tests/api.test.js:12:1
+✖ actual model training, prediction and persisted evaluation (0.075905ms)
+  Error: Instance closed unexpectedly with code "100" and signal "null"
+      at MongoInstance.closeHandler (/workspace/scratch/39f86420ae94/ess-sentinel-web/node_modules/mongodb-memory-server-core/lib/util/MongoInstance.js:335:58)
+      at ChildProcess.emit (node:events:514:28)
+      at maybeClose (node:internal/child_process:1172:16)
+      at ChildProcess._handle.onexit (node:internal/child_process:335:5)
+
+test at ess-sentinel-web/tests/api.test.js:13:1
+✖ Python startup failure and timeout are structured (0.118358ms)
+  Error: Instance closed unexpectedly with code "100" and signal "null"
+      at MongoInstance.closeHandler (/workspace/scratch/39f86420ae94/ess-sentinel-web/node_modules/mongodb-memory-server-core/lib/util/MongoInstance.js:335:58)
+      at ChildProcess.emit (node:events:514:28)
+      at maybeClose (node:internal/child_process:1172:16)
+      at ChildProcess._handle.onexit (node:internal/child_process:335:5)

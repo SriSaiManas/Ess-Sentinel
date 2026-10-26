@@ -1,0 +1,167 @@
+{
+  "version": "ESS-2026-10-26T133226-ebf09b1e",
+  "timestamp": "2026-10-26T13:32:26.626776+00:00",
+  "dataset_hash": "ebf09b1eaec721d6a5a164d8b1668ca94d3021b75d9d81961cb2e2f846382a6d",
+  "cutoff": 24,
+  "features": [
+    "value_0h",
+    "value_24h",
+    "temperature",
+    "voltage",
+    "early_drift",
+    "percentage_drift",
+    "slope_0_24",
+    "normalized_drift",
+    "parameter",
+    "part_family"
+  ],
+  "split": {
+    "train": [
+      "LOT-015",
+      "LOT-009",
+      "LOT-014",
+      "LOT-007",
+      "LOT-012",
+      "LOT-010",
+      "LOT-006",
+      "LOT-019",
+      "LOT-003",
+      "LOT-000"
+    ],
+    "validation": [
+      "LOT-016",
+      "LOT-005",
+      "LOT-011"
+    ],
+    "calibration": [
+      "LOT-018",
+      "LOT-002",
+      "LOT-004"
+    ],
+    "test": [
+      "LOT-017",
+      "LOT-001",
+      "LOT-013",
+      "LOT-008"
+    ]
+  },
+  "policy": {
+    "safety_fraction": 0.85,
+    "robust_z": 3.5,
+    "temporal_z": 3.5,
+    "if_percentile": 95.0,
+    "minimum_peers": 8,
+    "scale_floor_fraction": 0.001,
+    "watch_score": 20,
+    "high_score": 45,
+    "critical_score": 75,
+    "population_weight": 30,
+    "drift_weight": 25,
+    "prediction_weight": 25,
+    "proximity_weight": 10,
+    "isolation_weight": 10
+  },
+  "seed": 42,
+  "synthetic": true,
+  "winners": {
+    "Leakage current": "GradientBoosting-3",
+    "Propagation delay": "GradientBoosting-2",
+    "Standby current": "GradientBoosting-2"
+  },
+  "hyperparameters": {
+    "Leakage current": {
+      "alpha": 0.9,
+      "ccp_alpha": 0.0,
+      "criterion": "friedman_mse",
+      "init": null,
+      "learning_rate": 0.1,
+      "loss": "huber",
+      "max_depth": 3,
+      "max_features": null,
+      "max_leaf_nodes": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 100,
+      "n_iter_no_change": null,
+      "random_state": 42,
+      "subsample": 1.0,
+      "tol": 0.0001,
+      "validation_fraction": 0.1,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "Propagation delay": {
+      "alpha": 0.9,
+      "ccp_alpha": 0.0,
+      "criterion": "friedman_mse",
+      "init": null,
+      "learning_rate": 0.1,
+      "loss": "huber",
+      "max_depth": 2,
+      "max_features": null,
+      "max_leaf_nodes": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 100,
+      "n_iter_no_change": null,
+      "random_state": 42,
+      "subsample": 1.0,
+      "tol": 0.0001,
+      "validation_fraction": 0.1,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "Standby current": {
+      "alpha": 0.9,
+      "ccp_alpha": 0.0,
+      "criterion": "friedman_mse",
+      "init": null,
+      "learning_rate": 0.1,
+      "loss": "huber",
+      "max_depth": 2,
+      "max_features": null,
+      "max_leaf_nodes": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 100,
+      "n_iter_no_change": null,
+      "random_state": 42,
+      "subsample": 1.0,
+      "tol": 0.0001,
+      "validation_fraction": 0.1,
+      "verbose": 0,
+      "warm_start": false
+    }
+  },
+  "test_metrics": {
+    "Leakage current": {
+      "MAE": 1.6784484424918884,
+      "RMSE": 7.788706834462029,
+      "R2": 0.6244769992398752,
+      "MedianAE": 0.15525657906343682
+    },
+    "Propagation delay": {
+      "MAE": 1.3346533925317272,
+      "RMSE": 6.1091453408229714,
+      "R2": 0.6488171184240352,
+      "MedianAE": 0.13081005541960788
+    },
+    "Standby current": {
+      "MAE": 0.34178001312511425,
+      "RMSE": 1.6020700661503482,
+      "R2": 0.6244272771268339,
+      "MedianAE": 0.02981266841472574
+    }
+  },
+  "runtime": {
+    "scikit-learn": "1.8.0",
+    "pandas": "2.2.3",
+    "numpy": "2.3.5"
+  }
+}

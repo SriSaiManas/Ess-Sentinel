@@ -1,0 +1,54 @@
+.............................................................            [100%]
+=============================== warnings summary ===============================
+tests/test_services.py::test_timestamp_quality
+  /workspace/scratch/39f86420ae94/ESS_Sentinel_2.0/services/quality.py:38: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+    times[t]=pd.to_datetime(data[c],errors='coerce',utc=True)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.14.6-final-0 ________________
+
+Name                             Stmts   Miss  Cover   Missing
+--------------------------------------------------------------
+app.py                              44      6    86%   14-15, 32-33, 45-46
+ess/__init__.py                      0      0   100%
+ess/anomaly/__init__.py              0      0   100%
+ess/anomaly/statistics.py           27      0   100%
+ess/audit.py                        15      0   100%
+ess/cli.py                          41     41     0%   2-44
+ess/config.py                       36      2    94%   30, 38
+ess/data/__init__.py                 0      0   100%
+ess/data/synthetic.py               46      0   100%
+ess/data/validation.py              89      1    99%   22
+ess/explainability/__init__.py       0      0   100%
+ess/explainability/reasons.py       12      0   100%
+ess/features/__init__.py             0      0   100%
+ess/features/engineering.py         31      0   100%
+ess/prediction/__init__.py           0      0   100%
+ess/prediction/evaluation.py        15      0   100%
+ess/prediction/training.py         121      1    99%   63
+ess/reports/__init__.py              0      0   100%
+ess/reports/export.py               45      0   100%
+ess/risk/__init__.py                 0      0   100%
+ess/risk/engine.py                  58      0   100%
+ess/ui/__init__.py                   0      0   100%
+ess/ui/charts.py                    24      0   100%
+services/__init__.py                 0      0   100%
+services/quality.py                 57      0   100%
+services/reports.py                 95      0   100%
+services/store.py                  109      0   100%
+services/workspace.py               97      3    97%   27, 92, 96
+ui/__init__.py                       0      0   100%
+ui/common.py                        98      9    91%   37-39, 46, 56-59, 89
+ui/navigation.py                     2      0   100%
+ui/pages/__init__.py                 0      0   100%
+ui/pages/command.py                 85     12    86%   60-64, 82-88
+ui/pages/engineering.py            130     31    76%   22-52
+ui/pages/governance.py              95     14    85%   66-67, 72-83
+ui/pages/intelligence.py           125      1    99%   119
+ui/pages/system.py                  37      1    97%   13
+ui/theme.py                         20      0   100%
+--------------------------------------------------------------
+TOTAL                             1554    122    92%
+Coverage JSON written to file evidence/coverage.json
+61 passed, 1 warning in 100.38s (0:01:40)

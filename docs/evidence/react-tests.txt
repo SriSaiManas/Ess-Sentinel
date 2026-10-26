@@ -1,0 +1,56 @@
+TAP version 13
+# The width(0) and height(0) of chart should be greater than 0,
+#        please check the style of container, or the props width(100%) and height(100%),
+#        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+#        height and width.
+# The width(0) and height(0) of chart should be greater than 0,
+#        please check the style of container, or the props width(100%) and height(100%),
+#        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+#        height and width.
+# The width(0) and height(0) of chart should be greater than 0,
+#        please check the style of container, or the props width(100%) and height(100%),
+#        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+#        height and width.
+# The width(0) and height(0) of chart should be greater than 0,
+#        please check the style of container, or the props width(100%) and height(100%),
+#        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+#        height and width.
+# Subtest: login, real React Router navigation and all 17 empty pages render
+ok 1 - login, real React Router navigation and all 17 empty pages render
+  ---
+  duration_ms: 1059.210463
+  type: 'test'
+  ...
+# Subtest: API error displayed and login remains blocked
+ok 2 - API error displayed and login remains blocked
+  ---
+  duration_ms: 20.41047
+  type: 'test'
+  ...
+# Subtest: table filter and pagination work on actual rendered React controls
+ok 3 - table filter and pagination work on actual rendered React controls
+  ---
+  duration_ms: 63.180548
+  type: 'test'
+  ...
+# Subtest: import commit requires validated preview and explicit confirmation
+ok 4 - import commit requires validated preview and explicit confirmation
+  ---
+  duration_ms: 6.439458
+  type: 'test'
+  ...
+# Subtest: responsive CSS defines collapsed navigation and scrollable tables
+ok 5 - responsive CSS defines collapsed navigation and scrollable tables
+  ---
+  duration_ms: 2.982471
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2146.597737

@@ -1,0 +1,7 @@
+.env
+.venv
+node_modules
+var
+**/__pycache__
+**/.pytest_cache
+ml-service/legacy/outputs

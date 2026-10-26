@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "python": "3.14.6 (main, Aug  4 2026, 18:27:20) [Clang 22.1.3 ]",
+  "zip_crc": "passed",
+  "extracted_first_launch": "passed",
+  "exceptions": 0,
+  "errors": 0,
+  "dependency_check": "No broken requirements found."
+}

@@ -1,0 +1,74 @@
+TAP version 13
+# {"id":"90beff12-8d4a-4027-934f-971266cd32fe","method":"GET","path":"/batches","status":401}
+# Subtest: unauthenticated access denied
+ok 1 - unauthenticated access denied
+  ---
+  duration_ms: 28.880172
+  type: 'test'
+  ...
+# {"id":"4f348bf1-477d-4bdc-96de-a741fc9ae8af","method":"POST","path":"/api/actions/reset","status":403}
+# Subtest: viewer cannot invoke mutation
+ok 2 - viewer cannot invoke mutation
+  ---
+  duration_ms: 9.464232
+  type: 'test'
+  ...
+# {"id":"b84ab2d7-70cc-44e7-b9cc-8489a54d86ec","method":"POST","path":"/api/actions/screen","status":400}
+# {"id":"35db6e07-8ab8-4b04-9219-8cbb0d444400","method":"POST","path":"/api/actions/reset","status":400}
+# Subtest: invalid stage and client privilege fields rejected before database access
+ok 3 - invalid stage and client privilege fields rejected before database access
+  ---
+  duration_ms: 10.911958
+  type: 'test'
+  ...
+# {"id":"4337395b-bfc0-45f7-81f2-dbbe42cf8ec5","method":"GET","path":"/api/batches/not-an-id","status":400}
+# {"id":"73432bd1-78b0-4c3d-aab8-5467a58663da","method":"GET","path":"/api/batches","status":400}
+# Subtest: malformed object IDs and bad pagination rejected
+ok 4 - malformed object IDs and bad pagination rejected
+  ---
+  duration_ms: 8.230229
+  type: 'test'
+  ...
+# {"id":"7c864976-f2d3-4222-b0ad-583307cc2a8a","method":"POST","path":"/api/batches","status":400}
+# Subtest: unsupported upload and malformed JSON produce structured errors
+ok 5 - unsupported upload and malformed JSON produce structured errors
+  ---
+  duration_ms: 13.349645
+  type: 'test'
+  ...
+# {"id":"11be92ae-db97-4b47-b590-d76a73d8f2b4","method":"DELETE","path":"/audit-events/aaaaaaaaaaaaaaaaaaaaaaaa","status":404}
+# Subtest: audit mutation endpoint unavailable
+ok 6 - audit mutation endpoint unavailable
+  ---
+  duration_ms: 4.443796
+  type: 'test'
+  ...
+# Subtest: policy and review Mongoose validators enforce constraints
+ok 7 - policy and review Mongoose validators enforce constraints
+  ---
+  duration_ms: 4.595304
+  type: 'test'
+  ...
+# {"id":"afb2c4de-07fd-4387-b300-8d4dfa219f5b","method":"POST","path":"/api/actions/diagnostics","status":503}
+# Subtest: internal worker failure is reported without fabricated results
+ok 8 - internal worker failure is reported without fabricated results
+  ---
+  duration_ms: 15.45366
+  type: 'test'
+  ...
+# {"id":"6082b784-4537-40ec-b7ae-38ae62d8395a","method":"GET","path":"/api/openapi.json","status":200}
+# Subtest: OpenAPI endpoint lists actual action routes
+ok 9 - OpenAPI endpoint lists actual action routes
+  ---
+  duration_ms: 3.21407
+  type: 'test'
+  ...
+1..9
+# tests 9
+# suites 0
+# pass 9
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 571.859122

@@ -1,0 +1,8 @@
+.............................................................            [100%]
+=============================== warnings summary ===============================
+tests/test_services.py::test_timestamp_quality
+  /workspace/scratch/39f86420ae94/ess-sentinel-web/ml-service/legacy/services/quality.py:38: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+    times[t]=pd.to_datetime(data[c],errors='coerce',utc=True)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+61 passed, 1 warning in 52.69s

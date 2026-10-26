@@ -1,0 +1,16 @@
+{
+  "safety_fraction": 0.85,
+  "robust_z": 3.5,
+  "temporal_z": 3.5,
+  "if_percentile": 95.0,
+  "minimum_peers": 8,
+  "scale_floor_fraction": 0.001,
+  "watch_score": 20,
+  "high_score": 45,
+  "critical_score": 75,
+  "population_weight": 30,
+  "drift_weight": 25,
+  "prediction_weight": 25,
+  "proximity_weight": 10,
+  "isolation_weight": 10
+}

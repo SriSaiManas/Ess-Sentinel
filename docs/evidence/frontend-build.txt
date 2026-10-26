@@ -1,0 +1,26 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> ess-sentinel-web@3.0.0 build
+> npm run build -w client
+
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> build
+> vite build
+
+vite v7.3.7 building client environment for production...
+transforming...
+../node_modules/react-router/dist/development/index.mjs (11:0): Module level directives cause errors when bundled, "use client" in "../node_modules/react-router/dist/development/index.mjs" was ignored.
+../node_modules/react-router/dist/development/dom-export.mjs (1:0): Module level directives cause errors when bundled, "use client" in "../node_modules/react-router/dist/development/dom-export.mjs" was ignored.
+✓ 2174 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.36 kB │ gzip:   0.27 kB
+dist/assets/index-CC13UVsJ.css    5.70 kB │ gzip:   1.89 kB
+dist/assets/index-DiCJfNOm.js   707.87 kB │ gzip: 212.46 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 3.54s

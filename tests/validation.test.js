@@ -1,0 +1,12 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import request from 'supertest';import {createApp} from '../server/app.js';import {models} from '../server/models.js';
+process.env.ADMIN_TOKEN='test-admin-token-with-at-least-32-characters';process.env.VIEWER_TOKEN='viewer-token';
+const auth={Authorization:'Bearer '+process.env.ADMIN_TOKEN};const app=createApp(async(op,args)=>({operation:op,args}));
+test('unauthenticated access denied',async()=>{await request(app).get('/api/batches').expect(401)});
+test('viewer cannot invoke mutation',async()=>{await request(app).post('/api/actions/reset').set('Authorization','Bearer viewer-token').send({}).expect(403)});
+test('invalid stage and client privilege fields rejected before database access',async()=>{await request(app).post('/api/actions/screen').set(auth).send({batchId:'a'.repeat(24),stage:30}).expect(400);await request(app).post('/api/actions/reset').set(auth).send({role:'admin'}).expect(400)});
+test('malformed object IDs and bad pagination rejected',async()=>{await request(app).get('/api/batches/not-an-id').set(auth).expect(400);await request(app).get('/api/batches?limit=0').set(auth).expect(400)});
+test('unsupported upload and malformed JSON produce structured errors',async()=>{await request(app).post('/api/batches').set(auth).attach('file',Buffer.from('bad'),'test.exe').expect(400);const r=await request(app).post('/api/actions/reset').set(auth).set('Content-Type','application/json').send('{').expect(400);assert.ok(r.body.error.requestId)});
+test('audit mutation endpoint unavailable',async()=>{await request(app).delete('/api/audit-events/'+ 'a'.repeat(24)).set(auth).expect(404)});
+test('policy and review Mongoose validators enforce constraints',()=>{const r=new models.reviews({run_id:'a'.repeat(24),component_id:'C1',state:'INVALID',note:'x'.repeat(2001)});const e=r.validateSync();assert.ok(e.errors.state);assert.ok(e.errors.note)});
+test('internal worker failure is reported without fabricated results',async()=>{const failing=createApp(async()=>{throw Object.assign(new Error('Python unavailable'),{status:503})});const r=await request(failing).post('/api/actions/diagnostics').set(auth).send({}).expect(503);assert.equal(r.body.error.message,'Python unavailable')});
+test('OpenAPI endpoint lists actual action routes',async()=>{const r=await request(app).get('/api/openapi.json').set(auth).expect(200);assert.ok(r.body.paths['/api/actions/train'])});

@@ -1,0 +1,16 @@
+[
+  {
+    "population": "Baseline",
+    "components": 120,
+    "review": 25,
+    "static_violations": 0,
+    "predicted_crossings": 0
+  },
+  {
+    "population": "Latent defect",
+    "components": 120,
+    "review": 26,
+    "static_violations": 0,
+    "predicted_crossings": 1
+  }
+]
