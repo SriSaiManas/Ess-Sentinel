@@ -7,3 +7,4 @@ __pycache__/
 *.pyc
 tests/frontend-bundle.mjs
 ml-service/legacy/outputs/
+.idea/
